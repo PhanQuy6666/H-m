@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhap vao meters :</h1>
+    <input type="number" id="meter">
+    <button onclick="meterToFoot()" >Result</button>
+    <h1 id="result1"></h1>
+    <h1>Nhap vao Feet :</h1>
+    <input type="number" id="feet">
+    <button onclick="footToMeter()" >Result</button>
+    <h1 id="result2"></h1>
+    <script>
+        
+        function meterToFoot(){
+            let meter = +document.getElementById("meter").value;
+            let feet = 3.279*meter;
+            document.getElementById("result1").innerHTML = meter + " meter" + " = " + feet + " Feet";
+
+        }
+          
+        function footToMeter(){
+            let feet = +document.getElementById("feet").value;
+            let meter = 0.305*feet;
+            document.getElementById("result2").innerHTML = feet + " foot" + " = " + meter + " meter";
+
+        }
+        
+    </script>
+</body>
+</html>
