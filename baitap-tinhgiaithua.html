@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="Number" id="result" onchange="result()">
+    <script>
+        
+        function factorial(n){
+            let result = 1;
+            for (let i=1; i<=n; i++){
+                result *= i;
+            }
+            return result;
+        }
+        function result(){
+            let n = +document.getElementById("result").value;
+            let result = factorial(n);
+            alert("Giai thua cua " + n + " la : " + result);
+        }
+    </script>
+</body>
+</html>

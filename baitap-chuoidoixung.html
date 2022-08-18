@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="number" onchange="check()">
+    <script>
+
+        function palindromeFun(str){
+            const arrValue = str.split('');
+            let n = arrValue.length;
+            let mid = parseInt(n/2);
+            for(let i=0; i<mid; i++){
+                if (arrValue[i] != arrValue[n-1-i]){
+                    return false;
+                }
+                
+            }
+            return true;
+        }
+        function check(){
+            let str = document.getElementById("number").value;
+            let check = palindromeFun(str);
+            if (check){
+                alert ('Chuoi ${str} la chuoi doi xung');
+            }
+            else{
+                alert ('Chuoi ${str} khong phai la chuoi doi xung');
+            }
+        }       
+        
+    </script>
+</body>
+</html>
