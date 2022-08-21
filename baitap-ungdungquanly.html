@@ -10,13 +10,15 @@
     <h1>Add New Product</h1>
    
     <div >
-        <input style="width: 230px; height:24px;" type="text" id="newProduct">
+        <input style="width: 230px; height:24px;" type="text" id="newProduct" placeholder="Name Product">
+        <input style="width: 230px; height:24px;" type="text" id="newPrice" placeholder="Price Product">
         <button onclick="add()" >Add</button>
     </div>
     <h1>Display All Product</h1>
-    <input type="text" id="name">
-    <button onclick="searchByName()">Search</button>
-    <button onclick="Ascending">Ascending</button>
+    <input type="text" id="name" placeholder="Name Product Search">
+    <button onclick="searchByName()" >Search</button>
+    <button onclick="Ascending()">Tang dan</button>
+    <button onclick="decrease()">Giam dan</button>
     <table border = '1' width = '500' cellspacing='1' cellpadding='15'>
         <tr>
             <td colspan="2" id="nameProduct">
@@ -28,12 +30,14 @@
             <td id="numProduct">
                 
             </td>
+            <td colspan="2" id="buy">Buy</td>
         </tr>
         <tbody id="listProduct">
             
         </tbody>
         
     </table>
+    <button id="numCart" onclick="cart()">Cart</button>
     <script src="/baitap-ungdungquanly.js">
         
     </script>
